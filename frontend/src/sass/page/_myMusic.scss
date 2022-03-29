@@ -1,0 +1,17 @@
+.my_music__page{
+    .my_music__page__container{
+        margin-top: 8rem;
+        &__info{
+            @include flex(center, center);
+            flex-direction: column;
+            &__img{
+                width: 10rem;
+            }
+            h3{
+                font-size: 3rem;
+                color: $txt-second-color;
+                margin-top: 1rem;
+            }
+        }
+    }
+}

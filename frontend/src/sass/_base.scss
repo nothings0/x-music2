@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    text-transform: capitalize;
+    overflow-x: hidden;
+    border: none;
+    outline: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    text-overflow: ellipsis;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+  
+/* background */
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* scrollBar */
+::-webkit-scrollbar-thumb {
+    background: transparent; 
+}
+
+/* scrollBar on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $main-color; 
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    // 
+    // color: $white;
+}
+
+// .dark{
+//     background-color: $main-color;
+//     $main-bg: #282828;
+//     $main-color: #147aff;
+//     $white: #000;
+
+//     $bg-navbar: #292929;
+//     $bg-chart: #f7f7f7;
+//     $txt-main-color: #32323d;
+//     $txt-second-color: #27272f;
+//     $txt-third-color: #3f3f3f;
+//     $hover: #353535;
+// }
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover {
+    color: $main-color;
+}
+
+img {
+    max-width: 100%;
+}
+
+#app{
+    width: 100%;
+    background-color: $white;
+    min-height: 100vh;
+}
+
+.padding{
+    padding: 5rem 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.rank-container{
+    padding: 3rem 0;
+    margin: 0 10%;
+}
+.btn{
+    width: 100%;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    color: $white;
+    font-size: 2rem;
+    background-color: $main-color;
+    margin-top: 1rem;
+}
+.main-content{
+    margin-left: 22rem;
+    padding: 0 1rem;
+    transition: margin-left 0.3s ease;
+    @include tablet{
+        margin-left: 7rem;
+    }
+    @include mobile{
+        margin-left: 0;
+    }
+}
+
+
+
+@include tablet{
+    html {
+        font-size: 60%;
+    }
+    .wrap{
+        flex-direction: column;
+    }
+}
+
+@include mobile{
+    html {
+        font-size: 55%;
+    }
+}

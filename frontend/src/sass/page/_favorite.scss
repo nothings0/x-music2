@@ -1,0 +1,7 @@
+.favorite__page{
+    .update{
+        height: 100vh;
+        font-size: 5rem;
+        @include flex(center, center);
+    }
+}

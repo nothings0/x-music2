@@ -1,0 +1,70 @@
+.sidebar__left{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $width;
+    min-height: 100vh;
+    z-index: 101;
+    @include flex(center, flex-start);
+    flex-direction: column;
+    background: $bg-navbar;
+    padding: 5rem 0 0;
+    transition: width 0.3s ease, display 0.3s ease;
+    @include mobile{
+        display: none;
+    }
+    @include tablet{
+        width: 7rem;
+    }
+    &__logo{
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: -1.6rem;
+        margin-bottom: 0.4rem;
+        overflow: hidden;
+        a{
+            @include flex(center, center);
+        }
+        img{
+            width: 18rem;
+            padding-right: 1rem;
+            object-fit: cover;
+        }
+    }
+    &__navbar{
+        flex: 1;
+        margin-top: 3rem;
+        @include flex(center, flex-start);
+        flex-direction: column;
+        width: 100%;
+        &__item{
+            overflow: hidden;
+            width: 100%;
+            a{
+                @include flex(center, unset);
+                padding: 1rem 0 1rem 3rem;
+                @include tablet{
+                    padding: 1rem 0;
+                    justify-content: center;
+                }
+                i{
+                    font-size: 3rem;
+                }
+                span{
+                    font-size: 1.6rem;
+                    padding-left: 0.8rem;
+                    @include tablet{
+                        display: none;
+                    }
+                }
+            }
+            &.active{
+                background-color: $hover;
+                color: $main-color;
+            }
+        }
+        &__item ~ &__item{
+            margin-top: 1rem;
+        }
+    }
+}

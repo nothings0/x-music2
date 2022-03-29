@@ -1,0 +1,7 @@
+.user{
+    min-height: 100vh;
+    @include flex(center, center);
+    .logout__btn{
+        width: 50%;
+    }
+}

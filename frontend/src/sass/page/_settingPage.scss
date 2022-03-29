@@ -1,0 +1,99 @@
+.setting__page{
+    height: 100vh;
+    background-color: $bg-navbar;
+    .tabs__box{
+        margin-top: 6rem;
+        margin-bottom: 5rem;
+        padding: 3rem 2rem;
+        @include flex(center, unset);
+        flex-direction: column;
+        .tabs {
+            display: flex;
+            position: relative;
+            // &.line {
+            //     position: absolute;
+            //     left: 0;
+            //     bottom: 0;
+            //     width: 0;
+            //     height: 6px;
+            //     border-radius: 15px;
+            //     background-color: #c23564;
+            //     transition: all 0.2s ease;
+            // }
+        }
+        .tab-item {
+            min-width: 80px;
+            padding: 16px 20px 11px 20px;
+            font-size: 20px;
+            text-align: center;
+            color: $main-color;
+            background-color: #fff;
+            border-top: 5px solid transparent;
+            opacity: 0.6;
+            cursor: pointer;
+            transition: all 0.5s ease;
+
+            &:hover{
+                opacity: 1;
+                background-color: rgba(135, 107, 211, 0.05);
+                border-color: rgba(82, 73, 161, 0.1);
+            }
+            &.active{
+                opacity: 1;
+                border-top: 5px solid $main-color;
+            }
+        }
+        .tab-icon {
+            font-size: 24px;
+            width: 32px;
+            position: relative;
+            top: 2px;
+        }
+        .tab-content {
+            background-color: $white;
+            padding: 2.8rem 1rem;
+            width: 80%;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+        .tab-pane {
+            color: #333;
+            display: none;
+            &.active{
+                display: block;
+            }
+            h2{
+                font-size: 2.4rem;
+                margin-bottom: 0.8rem;
+            }
+            p{
+                font-size: 1.6rem;
+                span{
+                    display: block;
+                    padding-top: 1rem;
+                }
+            }
+            .button-container{
+               @include flex(center, center);
+               gap: 4rem;
+               &__item{
+                    width: 6rem;
+                    height: 6rem;
+                    border-radius: 50%;
+                    color: $main-color;
+                    @include flex(center, center);
+                    a{
+                       font-size: 4rem;
+                    }
+                    &:hover{
+                        background-color: $main-color;
+                        a{
+                            color: $white;
+                        }
+                    }
+               }
+            }
+        }
+    }
+
+}

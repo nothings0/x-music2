@@ -1,0 +1,187 @@
+.player{
+    position: fixed;
+    bottom: 0;
+    left: 0;right: 0;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: rgb(149 157 165 / 20%) 0px -9px 20px 2px;
+    z-index: 103;
+    padding: 2rem 3%;
+    @include flex(center, unset);
+    gap: 1rem;
+    height: 10rem;
+    transform: translateY(80%);
+    transition: transform 0.3s ease;
+    overflow: visible;
+
+    &.show{
+        transform: translateY(0);
+    }
+
+    &__show{
+        position: absolute;
+        top: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        @include flex(center, center);
+        
+        i{
+            border-radius: 50%;
+            font-size: 2.5rem;
+            color: $white;
+            background-color: $main-color;
+            padding: 0.5rem;
+        }
+    }
+
+    &__info{
+        @include flex(center, center);
+        width: 25%;
+        @include tablet{
+            width: 45%;
+        }
+        @include mobile{
+            width: 50%;
+            justify-content: center;
+        }
+        &__img{
+            width: 20%;
+            img{
+                overflow: hidden;
+                width: 6rem;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        &__txt{
+            padding-left: 1.5rem;
+            flex: 1;
+            @include mobile{
+                padding-left: 0.5rem;
+            }
+            h3{
+                font-size: 1.6rem;
+                color: $txt-second-color;
+                padding-bottom: 0.5rem;
+                width: max-content;
+            }
+            p{
+                font-size: 1.4rem;
+                color: $txt-third-color;
+            }
+        }
+        &__heart{
+            width: 10%;
+            cursor: pointer;
+            @include tablet{
+                width: 25%;
+            }
+            @include flex(center, center);
+            i{
+                font-size: 2.5rem
+            }
+            &:hover,
+            &.active{
+                i{
+                    color: $main-color;
+                }
+            }
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+    &__control{
+        @include flex(center, space-between);
+        flex: 1;
+        gap: 1.5rem;
+        @include mobile{
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+        &__btn{
+            @include flex(center, center);
+            width: 30%;
+            @include mobile{
+                width: 30%;
+            }
+            @include tablet{
+                justify-content: space-around;
+            }
+            i{
+                font-size: 2.5rem;
+                margin-left: 1.5rem;
+                cursor: pointer;
+                @include mobile{
+                    font-size: 2rem;
+                    margin-left: 0.5rem;
+                }
+            }
+            .prev_btn,
+            .next_btn{
+                @include tablet{
+                    display: none;
+                }
+            }
+            .repeat__btn,
+            .shuffle__btn{
+                font-size: 2rem;
+                color: $txt-third-color;
+                &.active{
+                    color: $main-color;
+                }
+                @include tablet{
+                    display: none;
+                }
+                @include mobile{
+                    display: none;
+                }
+            }
+            &__toggle{
+                .main__btn{
+                    font-size: 4.5rem;
+                    color: $main-color;
+                    @include mobile{
+                        font-size: 3.5rem;
+                    }
+                }
+            }
+        }
+        &__time{
+            width: 50%;
+            @include flex(center, space-between);
+            input{
+                width: 80%;
+                margin: 0 1rem;
+                cursor: pointer;
+                @include mobile{
+                    width: 50%;
+                }
+            }
+            span{
+                font-size: 1.6rem;
+                color: $txt-second-color;
+            }
+            @include mobile{
+                flex: 1;
+                justify-content: center;
+            }
+        }
+        &__volume{
+            @include flex(center, flex-end);
+            width: 20%;
+            input{
+                margin: 0 1rem;
+                width: 50%;
+                cursor: pointer;
+            }
+            i{
+                cursor: pointer;
+                font-size: 2rem;
+            }
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+}

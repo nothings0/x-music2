@@ -1,0 +1,46 @@
+.artist_page{
+    padding-right: 4rem;
+    background-color: $main-bg;
+    &__info{
+        margin-top: 8rem;
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        padding: 1rem 3rem;
+        &__left{
+            width: 70%;
+            &__intro{
+                h2{
+                    font-size: 4rem;
+                    color: $txt-second-color;
+                    padding-bottom: 0.5rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                    color: $txt-second-color; 
+                }
+            }
+            &__desp{
+                margin-top: 2rem;
+                & > div {
+                    font-size: 1.6rem;
+                    padding-top: 0.6rem;
+                }
+            }
+        }
+        &__right{
+            flex: 1;
+            &__img{
+                border-radius: 50%;
+                img{
+                    width: 100%;
+                    border-radius: inherit;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    &__song{
+        padding: 2rem 5%;
+    }
+}

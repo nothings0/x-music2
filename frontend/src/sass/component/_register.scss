@@ -1,0 +1,41 @@
+.register{
+    min-height: 100vh;
+    @include flex(center, center);
+    padding: 2rem;
+    background-color: $bg-navbar;
+    form{
+        padding: 2rem;
+        background-color: $white;
+        text-align: center;
+        width: 50rem;
+        .box {
+            width: 100%;
+            border-radius: 0.5rem;
+            padding: 1.2rem 1.4rem;
+            font-size: 1.8rem;
+            color: $txt-main-color;
+            background-color: $bg-navbar;
+            margin: 1rem 0;
+        }
+        h3{
+            margin-bottom: 1rem;
+            color: $txt-main-color;
+            text-transform: uppercase;
+            font-size: 3rem;
+        }
+        input{
+            text-transform: none;
+        }
+        p{
+            margin-top: 1.5rem;
+            font-size: 2rem;
+            color: $txt-main-color;
+            a{
+                color: $main-color;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
