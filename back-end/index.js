@@ -16,16 +16,25 @@ app.use("/api", apiRoute);
 app.use("/v1/auth", authRoute)
 app.use("/v1/song", songRoute)
 
-mongoose.set('bufferCommands', false);
-mongoose.connect(process.env.MONGODB_URL,{
-  useNewUrlParser: true
-})
-.then(() => {
-  console.log('connected to db');
-})
-.catch((err) => {
-  console.log(err.message);
-})
+// mongoose.set('bufferCommands', false);
+// mongoose.connect(process.env.MONGODB_URL,{
+//   useNewUrlParser: true
+// })
+// .then(() => {
+//   console.log('connected to db');
+// })
+// .catch((err) => {
+//   console.log(err.message);
+// })
+const connect = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URL)
+    console.log("Connected to mongoDB.");
+  } catch (error) {
+    console.log(error)
+  }
+}
+connect()
 app.listen(process.env.PORT || 8000, () => {
   console.log("server is running...");
 });

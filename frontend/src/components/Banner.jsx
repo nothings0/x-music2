@@ -1,7 +1,4 @@
 import React, { useContext } from "react";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SongContext } from "../Contexts/SongContext";
